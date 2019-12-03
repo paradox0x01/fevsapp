@@ -1,0 +1,72 @@
+<div ngxUiLoaderBlurred blur="2">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkblue;">
+        <a class="navbar-brand" [routerLink]="['/dashboard']">FEVS APPLICATION</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" *ngIf="this.authService.isLoggedIn()">
+              <a class="nav-link" [routerLink]="['/dashboard']">
+                <span><i class="fab fa-windows"></i></span>
+                DASHBOARD</a>
+            </li>
+            <li class="nav-item" ngbDropdown >
+              <a class="nav-link" ngbDropdownToggle id="navbarDropdown8" role="button"
+                 *ngIf="this.authService.isLoggedIn()"
+                 > <span><i class="far fa-plane-departure"></i></span> VOYAGEURS
+                <span class="sr-only"></span>
+              </a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown8" class="dropdown-menu animate slideIn">
+                <a [routerLink]="['/tablevoyags']" class="dropdown-item" (click)="$event.preventDefault()">
+                  <span><i class="far fa-list"></i></span> LISTE DES VOYAGEURS</a>
+                <a [routerLink]="['/formsvoyag']" class="dropdown-item" (click)="$event.preventDefault()" >
+                  <span><i class="far fa-user-plus"></i></span>  AJOUTER UN VOYAGEUR</a>
+              </div>
+            </li>
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link"
+                 style="cursor: pointer"
+                 ngbDropdownToggle
+                 *ngIf="this.authService.isLoggedIn()"
+                 id="navbarDropdown1">
+                <span><i class="far fa-users"></i></span>
+                EXPEDITEURS</a>
+              <div ngbDropdownMenu aria-labelledby="navbarDropdown1" class="dropdown-menu animate slideIn">
+                <a [routerLink]="['/tablexpediteur']" class="dropdown-item" (click)="$event.preventDefault()" >
+                  <span><i class="far fa-list"></i></span> LISTE DES EXPEDITEURS</a>
+                <a [routerLink]="['/formexpediteur']" class="dropdown-item" (click)="$event.preventDefault()" >
+                  <span><i class="far fa-plus"></i></span> AJOUTER UN EXPEDITEUR</a>
+              </div>
+            </li>
+      
+            <li class="nav-item" ngbDropdown>
+              <a class="nav-link" [routerLink]="['/addlogistiq']" *ngIf="this.authService.isLoggedIn()">
+                <span><i class="far fa-dolly-flatbed"></i></span>
+                GESTION DE COLIS</a>
+            </li>
+            <!--
+              <li class="nav-item" ngbDropdown>
+              <a class="nav-link" [routerLink]="['/rapports']" *ngIf="this.authService.isLoggedIn()">
+                <span><i class="far fa-dolly-flatbed"></i></span>
+                RAPPORT</a>
+            </li>
+            -->
+          </ul>
+          <ul class="navbar-nav mr-1">
+            <li class=" nav-item form-inline my-2 my-lg-0">
+              <a class=" nav-link mr-1" [routerLink]="['/login']"  (click)="logOut()" *ngIf="this.authService.isLoggedIn()">
+                <span><i class="far fa-sign-out"></i></span>
+                Déconnexion</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>      
+</div>
+<ngx-ui-loader></ngx-ui-loader>
+

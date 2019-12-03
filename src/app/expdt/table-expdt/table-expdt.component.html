@@ -1,0 +1,53 @@
+<nz-page-header nzBackIcon nzTitle="LISTE DES EXPEDITEURS">
+  <nz-page-header-extra>
+    <nz-input-group [nzSuffix]="suffixIconSearch">
+      <input type="text" nz-input placeholder="Rechercher un expéditeur"  (input)="dt.filterGlobal($event.target.value, 'contains')"
+      />
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+      </ng-template>
+    </nz-input-group>
+  </nz-page-header-extra>
+</nz-page-header>
+<p-table #dt  [value]="Expediteur" 
+[paginator]="true" [rows]="10" 
+[resizableColumns]="true" columnResizeMode="expand"
+[globalFilterFields]="['nom_prenoms']">
+  <ng-template pTemplate="header">
+    <tr>
+      <th pResizableColumn>EXPEDITEURS</th>
+      <th pResizableColumn>VILLE DEPART</th>
+      <th pResizableColumn>VILLE ARRIVEE</th>
+      <th pResizableColumn>DATE DE DEPART</th>
+      <th pResizableColumn>TYPE DE COLIS</th>
+      <th pResizableColumn>ACTIONS</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-expdt>
+    <tr>
+      <td class="ui-resizable-column">{{expdt.nom_prenoms}}</td>
+      <td class="ui-resizable-column">{{expdt.villeDepart}}</td>
+      <td class="ui-resizable-column">{{expdt.villeArrivee}}</td>
+      <td class="ui-resizable-column">{{expdt.jourDepart | date: 'fullDate'}}</td>
+      <td class="ui-resizable-column">{{expdt.typeColis}}</td>
+      <td class="ui-resizable-column">
+        <div fxLayout="row" fxLayoutGap="5px">
+          <div><button class="btn btn-sm btn-primary"
+            [routerLink]="['/expdt', expdt._id, 'edit']">
+            <span><i class="far fa-edit"></i></span>
+          </button></div>
+          <div><button class="btn btn-sm btn-warning" [routerLink]="['/expdt', expdt._id]">
+            <span><i class="far fa-eye"></i></span>
+          </button></div>
+          <div><button nz-popconfirm
+                       nzPopconfirmTitle="Voulez vraiment supprimer?"
+                       nzPopconfirmPlacement="bottom"
+                       (nzOnConfirm)="confirm(expdt._id)"
+                       (nzOnCancel)="cancel()" class="btn btn-sm btn-danger">
+            <span><i class="far fa-trash"></i></span>
+          </button></div>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

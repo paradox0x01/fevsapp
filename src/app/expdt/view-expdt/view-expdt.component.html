@@ -1,0 +1,28 @@
+<div class="container">
+    <nz-page-header nzBackIcon nzTitle="INFORMATION DETAILLÉ EXPEDITEUR">
+    </nz-page-header>
+    <div class="card">
+        <div class="card-body" *ngIf="expediteur">
+            <p> <span style="margin-right: 10px">
+                <i class="fad fa-user"></i>
+            </span>{{expediteur.nom_prenoms}}</p>
+            <nz-divider></nz-divider>
+            <nz-descriptions>
+                <nz-descriptions-item nzTitle="VILLE DE DEPART">{{expediteur.villeDepart}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="JOUR DE DÉPART">{{expediteur.jourDepart | date:'fullDate'}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="VILLE D'ARRIVÉE">{{expediteur.villeArrivee}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="JOUR D'ARRIVEE">{{expediteur.jourArrivee | date:'fullDate'}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="TYPE DE COLIS">
+                    {{expediteur.typeColis}}
+                </nz-descriptions-item>
+                <nz-descriptions-item nzTitle="NOMBRE DE KILOS">{{expediteur.nbreKilo }} Kilos</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="MONTANT PAYÉ PAR L'EXPEDITEUR">{{expediteur.montantExpediteur}} Francs CFA</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="NOM & PRÉNOMS">{{expediteur.nom_prenoms}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="DATE DE NAISSANCE">{{expediteur.dateNaissance | date:'mediumDate'}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="ADRESSE GEOGRAPHIQUE">{{expediteur.addresse}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="ADRESSE MAIL">{{expediteur.email}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="NUMERO DE TELEPHONE">{{expediteur.telephone}}</nz-descriptions-item>
+            </nz-descriptions>
+        </div>
+    </div>
+</div>

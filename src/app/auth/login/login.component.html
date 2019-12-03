@@ -1,0 +1,32 @@
+<div class="main">
+    <div class="card loading">
+        <div class="card-header" style="background-color: #007ad9; color: white">
+            <span>BIENVENUE A FEVS, VEUILLEZ VOUS CONNECTER</span>
+        </div>
+        <div class="card-body">
+            <form nz-form [formGroup]="loginForm" class="login-form">
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="S'il vous plaît  veuillez entrez votre nom d'utilisateur!">
+                        <nz-input-group nzPrefixIcon="user">
+                            <input type="text" formControlName="username" nz-input placeholder="Nom d'utilisateur" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control nzErrorTip="S'il vous veuillez entrez votre mot de passe!">
+                        <nz-input-group nzPrefixIcon="lock">
+                            <input type="password" formControlName="password" nz-input placeholder="Mot de passe" />
+                        </nz-input-group>
+                    </nz-form-control>
+                </nz-form-item>
+                <nz-form-item>
+                    <nz-form-control>
+                        <button nz-button (click)="login()" class="login-form-button" [nzType]="'primary'">Connexion</button>
+                    </nz-form-control>
+                </nz-form-item>
+                <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+            </form>
+        </div>
+    </div>
+</div>
+

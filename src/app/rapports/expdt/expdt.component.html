@@ -1,0 +1,99 @@
+<nz-page-header nzBackIcon nzTitle="RAPPORT GENERAL">
+</nz-page-header>
+
+<div class="card-container">
+  <nz-tabset [nzTabPosition]="'top'" [nzType]="'card'">
+    <nz-tab nzTitle="RAPPORT VOYAGEURS">
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div style="font-size: medium; font-style: italic; position: center">
+          <span>Rechercher par date: </span>
+        </div>
+        <div>
+          <nz-date-picker nzPlaceHolder="Date de debut"></nz-date-picker>
+        </div>
+        <div>
+          <nz-date-picker nzPlaceHolder="Date de fin"></nz-date-picker>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm">
+            <span><i class="far fa-search"></i></span>
+            Rechercher
+          </button>
+        </div>
+      </div>
+      <div style="margin-top: 10px">
+        <nz-table #basicTable>
+          <thead>
+          <tr>
+            <th>
+              <span><i class="far fa-users"></i></span>
+              NOMBRES TOTAL DE VOYAGEURS</th>
+            <th>
+              <span><i class="far fa-calendar-alt"></i></span>
+              DATE DU RAPPORT</th>
+            <th> <span> <i class="far fa-sack"></i></span>
+              REVENUS TOTAL</th>
+            <th>
+              <span><i class="far fa-thumbs-up"></i></span>
+              COLIS COMFIRME</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </nz-table>
+      </div>
+    </nz-tab>
+    <nz-tab nzTitle="RAPPORT EXPEDITEURS">
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div style="font-size: medium; font-style: italic; position: center">
+          <span>Rechercher par date: </span>
+        </div>
+        <div>
+          <nz-date-picker nzPlaceHolder="Date de debut"></nz-date-picker>
+        </div>
+        <div>
+          <nz-date-picker nzPlaceHolder="Date de fin"></nz-date-picker>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm">
+            <span><i class="far fa-search"></i></span>
+            Rechercher
+          </button>
+        </div>
+      </div>
+      <div style="margin-top: 10px">
+        <nz-table #basicTable>
+          <thead>
+          <tr>
+            <th>
+              <span><i class="far fa-users"></i></span>
+              NOMBRES TOTAL D'EXPEDITEURS</th>
+            <th>
+              <span><i class="far fa-calendar-alt"></i></span>
+              DATE DU RAPPORT</th>
+            <th> <span> <i class="far fa-sack"></i></span>
+              REVENUS TOTAL</th>
+            <th>
+              <span><i class="far fa-thumbs-up"></i></span>
+              COLIS COMFIRME</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </nz-table>
+      </div>
+    </nz-tab>
+  </nz-tabset>
+</div>
+
+

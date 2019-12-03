@@ -1,0 +1,97 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="60" name="TypeScript" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="33">
+            <item index="0" class="java.lang.String" itemvalue="fxlayout" />
+            <item index="1" class="java.lang.String" itemvalue="fxflex" />
+            <item index="2" class="java.lang.String" itemvalue="fxlayoutgap" />
+            <item index="3" class="java.lang.String" itemvalue="nz-icon" />
+            <item index="4" class="java.lang.String" itemvalue="nztype" />
+            <item index="5" class="java.lang.String" itemvalue="nz-input" />
+            <item index="6" class="java.lang.String" itemvalue="nz-button" />
+            <item index="7" class="java.lang.String" itemvalue="nz-row" />
+            <item index="8" class="java.lang.String" itemvalue="[nzgutter]" />
+            <item index="9" class="java.lang.String" itemvalue="nz-col" />
+            <item index="10" class="java.lang.String" itemvalue="[nzspan]" />
+            <item index="11" class="java.lang.String" itemvalue="nzspan" />
+            <item index="12" class="java.lang.String" itemvalue="[formgroup]" />
+            <item index="13" class="java.lang.String" itemvalue="nzgutter" />
+            <item index="14" class="java.lang.String" itemvalue="nz-form" />
+            <item index="15" class="java.lang.String" itemvalue="formcontrolname" />
+            <item index="16" class="java.lang.String" itemvalue="[routerlink]" />
+            <item index="17" class="java.lang.String" itemvalue="nz-popconfirm" />
+            <item index="18" class="java.lang.String" itemvalue="nzpopconfirmtitle" />
+            <item index="19" class="java.lang.String" itemvalue="nzpopconfirmplacement" />
+            <item index="20" class="java.lang.String" itemvalue="(nzonconfirm)" />
+            <item index="21" class="java.lang.String" itemvalue="(nzoncancel)" />
+            <item index="22" class="java.lang.String" itemvalue="fxflexlayout" />
+            <item index="23" class="java.lang.String" itemvalue="fxflexgap" />
+            <item index="24" class="java.lang.String" itemvalue="ngbdropdown" />
+            <item index="25" class="java.lang.String" itemvalue="ngbdropdowntoggle" />
+            <item index="26" class="java.lang.String" itemvalue="ngbdropdownmenu" />
+            <item index="27" class="java.lang.String" itemvalue="(click)" />
+            <item index="28" class="java.lang.String" itemvalue="(ngsubmit)" />
+            <item index="29" class="java.lang.String" itemvalue="[disable]" />
+            <item index="30" class="java.lang.String" itemvalue="[disabled]" />
+            <item index="31" class="java.lang.String" itemvalue="*ngfor" />
+            <item index="32" class="java.lang.String" itemvalue="*ngif" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="31">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="nz-divider" />
+            <item index="7" class="java.lang.String" itemvalue="nz-card" />
+            <item index="8" class="java.lang.String" itemvalue="nz-statistic" />
+            <item index="9" class="java.lang.String" itemvalue="ng-template" />
+            <item index="10" class="java.lang.String" itemvalue="p-table" />
+            <item index="11" class="java.lang.String" itemvalue="nz-page-header" />
+            <item index="12" class="java.lang.String" itemvalue="nz-page-header-extra" />
+            <item index="13" class="java.lang.String" itemvalue="nz-input-group" />
+            <item index="14" class="java.lang.String" itemvalue="nz-tabset" />
+            <item index="15" class="java.lang.String" itemvalue="nz-tab" />
+            <item index="16" class="java.lang.String" itemvalue="nz-date-picker" />
+            <item index="17" class="java.lang.String" itemvalue="nz-table" />
+            <item index="18" class="java.lang.String" itemvalue="nz-form-control" />
+            <item index="19" class="java.lang.String" itemvalue="nz-select" />
+            <item index="20" class="java.lang.String" itemvalue="nz-option" />
+            <item index="21" class="java.lang.String" itemvalue="nz-form-item" />
+            <item index="22" class="java.lang.String" itemvalue="nz-form-label" />
+            <item index="23" class="java.lang.String" itemvalue="ng-container" />
+            <item index="24" class="java.lang.String" itemvalue="router-outlet" />
+            <item index="25" class="java.lang.String" itemvalue="nz-time-picker" />
+            <item index="26" class="java.lang.String" itemvalue="nz-input-number" />
+            <item index="27" class="java.lang.String" itemvalue="nz-spin" />
+            <item index="28" class="java.lang.String" itemvalue="nz-descriptions-item" />
+            <item index="29" class="java.lang.String" itemvalue="nz-descriptions" />
+            <item index="30" class="java.lang.String" itemvalue="p" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

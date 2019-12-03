@@ -1,0 +1,139 @@
+<div>
+    <span><p> <span style="font-size: medium"><i class="far fa-hand-holding-box"></i></span> ATTRIBUTION DE COLIS</span>
+</div>
+<div class="card">
+    <div class="card-body">
+        <form nz-form [formGroup]="colisForm">
+            <div fxLayout="column" fxLayoutGap="40px">
+                <div fxFlex="49">
+                    <div nz-row>
+                        <div nz-row>
+                            <div nz-col>
+                                <nz-form-item>
+                                    <nz-form-label [nzSpan]="6">
+                                        Voyageur
+                                    </nz-form-label>
+                                    <nz-form-control [nzSpan]="12">
+                                        <nz-select nzShowSearch
+                                                   nzAllowClear
+                                                   formControlName="voyageur"
+                                                   style="width: 300px"
+                                                   nzPlaceHolder="Selectionnez le voyageur" >
+                                            <nz-option *ngFor="let voyags of voyageurs$ | async" [nzValue]="voyags.nom_prenoms" [nzLabel]="voyags.nom_prenoms"
+                                            ></nz-option>
+
+                                        </nz-select>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                        </div>
+                        <div nz-row>
+                            <div nz-col >
+                                <nz-form-item>
+                                    <nz-form-label [nzSpan]="6">
+                                        Expéditeur
+                                    </nz-form-label>
+                                    <nz-form-control [nzSpan]="12">
+                                        <nz-select nzShowSearch
+                                                   nzAllowClear
+                                                   formControlName="expediteur"
+                                                   style="width: 300px"
+                                                   nzPlaceHolder="Selectionnez l'expéditeur" >
+                                            <nz-option *ngFor="let expdt of expediteurs$ | async" [nzValue]="expdt._id" [nzLabel]="expdt.nom_prenoms"
+                                            ></nz-option>
+                                        </nz-select>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                            <div nz-row>
+                                <div nz-col >
+                                    <nz-form-item>
+                                        <nz-form-label [nzSpan]="6">
+                                            Status
+                                        </nz-form-label>
+                                        <nz-form-control [nzSpan]="12">
+                                            <nz-select nzShowSearch
+                                                       nzAllowClear
+                                                       formControlName="status"
+                                                       style="width: 300px"
+                                                       nzPlaceHolder="Status d'envoi" >
+                                                <nz-option nzLabel="En cours" nzValue="En cours"></nz-option>
+                                                <nz-option nzLabel="Retard" nzValue="Retard"></nz-option>
+                                                <nz-option nzLabel="Terminé" nzValue="Terminer"></nz-option>
+                                            </nz-select>
+                                        </nz-form-control>
+                                    </nz-form-item>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--SECOND BLOC-->
+
+                    <div fxFlex="49">
+                        <div nz-row>
+                            <div nz-col >
+                                <nz-form-item>
+                                    <nz-form-label [nzSpan]="6">
+                                        Date de départ
+                                    </nz-form-label>
+                                    <nz-form-control [nzSpan]="12">
+                                        <nz-date-picker formControlName="jourDepart" nzPlaceHolder="Entrez une date"></nz-date-picker>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                        </div>
+                        <div nz-row>
+                            <div nz-col >
+                                <nz-form-item>
+                                    <nz-form-label [nzSpan]="6">
+                                        Date arrivée
+                                    </nz-form-label>
+                                    <nz-form-control [nzSpan]="12">
+                                        <nz-date-picker formControlName="jourArrivee" nzPlaceHolder="Entrez une date"></nz-date-picker>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                        </div>
+                        <div nz-row>
+                            <div nz-col >
+                                <nz-form-item>
+                                    <nz-form-label [nzSpan]="6">
+                                        Heure depart
+                                    </nz-form-label>
+                                    <nz-form-control [nzSpan]="12">
+                                        <nz-time-picker
+                                                nzPlaceHolder="Entrez une heure"
+                                                formControlName="heureArrivee"
+                                                nzFormat="HH:mm"></nz-time-picker>
+                                    </nz-form-control>
+                                </nz-form-item>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div fxFlex fxLayout="row" fxLayoutGap="10px">
+                        <button
+                                [routerLink]="['/dashboard']"
+                                class="btn btn-warning btn-sm">
+                <span>
+                  <i class="fad fa-angle-left"></i>
+                </span>
+                            Annuler
+                        </button>
+                        <button
+                                [disabled]="!colisForm.valid"
+                                (click)="update()"
+                                class="btn btn-primary btn-sm">
+                  <span>
+                    <i class="fad fa-save"></i>
+                  </span>
+                            Sauvegarder
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

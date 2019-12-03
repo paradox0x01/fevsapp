@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56612f53-e4c0-4add-b7b0-7f716d416ef8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UB6Hi55PMgRaqQKk14LKiv6qiq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../UGSAPP/src/app" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.26506025" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56612f53-e4c0-4add-b7b0-7f716d416ef8" name="Default Changelist" comment="" />
+      <created>1574817554978</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574817554978</updated>
+      <workItem from="1574817558363" duration="4239000" />
+      <workItem from="1574844187667" duration="21562000" />
+      <workItem from="1574869614282" duration="10651000" />
+      <workItem from="1574892030237" duration="6639000" />
+      <workItem from="1574927279089" duration="21645000" />
+      <workItem from="1574955730249" duration="84000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="281" y="28" key="#Notifications" timestamp="1574817574585">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="281" y="28" key="#Notifications/0.0.1366.732@0.0.1366.732" timestamp="1574817574585" />
+    <state x="466" y="124" width="430" height="489" key="FileChooserDialogImpl" timestamp="1574955812006">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="466" y="124" width="430" height="489" key="FileChooserDialogImpl/0.0.1366.768/1366.0.1600.900@0.0.1366.768" timestamp="1574955812006" />
+    <state x="1562" y="0" width="1173" height="900" key="SettingsEditor" timestamp="1574850857467">
+      <screen x="1366" y="0" width="1600" height="900" />
+    </state>
+    <state x="167" y="0" width="1001" height="731" key="SettingsEditor/0.0.1366.732@0.0.1366.732" timestamp="1574821096938" />
+    <state x="1562" y="0" width="1173" height="900" key="SettingsEditor/0.0.1366.768/1366.0.1600.900@1366.0.1600.900" timestamp="1574850857467" />
+    <state x="347" y="159" key="run.anything.popup" timestamp="1574898311489">
+      <screen x="0" y="0" width="1366" height="732" />
+    </state>
+    <state x="347" y="159" key="run.anything.popup/0.0.1366.732@0.0.1366.732" timestamp="1574898311489" />
+  </component>
+</project>

@@ -1,0 +1,86 @@
+<div class="container">
+        <div class="row">
+        <div class="col-md-3">
+          <div class="card-counter primary">
+            <i class="far fa-dolly"></i>
+            <span class="count-numbers">{{totalColis}}</span>
+            <span class="count-name">Total colis</span>
+          </div>
+        </div>
+    
+        <div class="col-md-3">
+          <div class="card-counter danger">
+            <i class="far fa-user-tie"></i>
+            <span class="count-numbers">{{voyageur}}</span>
+            <span class="count-name">Voyageurs</span>
+          </div>
+        </div>
+    
+        <div class="col-md-3">
+          <div class="card-counter success">
+            <i class="far fa-users"></i>
+            <span class="count-numbers">{{expediteur}}</span>
+            <span class="count-name">Expéditeurs</span>
+          </div>
+        </div>
+    
+        <div class="col-md-3">
+          <div class="card-counter info">
+            <i class="fa fa-users"></i>
+            <span class="count-numbers">{{enCours}}</span>
+            <span class="count-name">Livraison en attente</span>
+          </div>
+        </div>
+      </div>
+      <nz-divider></nz-divider>
+    <div style="font-weight: bold; font-size: large; text-transform: uppercase">
+        <p><span><i class="far fa-users"></i></span><span style="margin-left: 10px">Liste des colis</span></p>
+    </div>
+      <div fxLayout="row" fxLayoutGap="20px">
+          <p-table [paginator]="true" [rows]="10" [value]="listColis$ | async" [resizableColumns]="true" columnResizeMode="expand">
+              <ng-template pTemplate="header">
+                  <tr>
+                      <th pResizableColumn>VOYAGEURS</th>
+                      <th pResizableColumn>EXPEDITEURS</th>
+                      <th pResizableColumn>TYPE DE COLIS</th>
+                      <th pResizableColumn>DATE DE DEPART</th>
+                      <th pResizableColumn>DATE D'ARRIVEE</th>
+                      <th pResizableColumn>STATUS</th>
+                      <th pResizableColumn>ACTIONS</th>
+                  </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-colis>
+                  <tr>
+                      <td class="ui-resizable-column">{{colis.voyageur}}</td>
+                      <td class="ui-resizable-column">{{colis.expediteur.nom_prenoms}}</td>
+                      <td class="ui-resizable-column">{{colis.expediteur.typeColis}}</td>
+                      <td class="ui-resizable-column">{{colis.jourDepart | date: 'mediumDate'}}</td>
+                      <td class="ui-resizable-column">{{colis.jourArrivee | date: 'mediumDate'}}</td>
+                      <td  class="ui-resizable-column">
+                          <span *ngIf="colis.status === 'En cours'" class="badge badge-pill badge-primary">{{colis.status}}</span>
+                          <span *ngIf="colis.status === 'Retard'" class="badge badge-pill badge-secondary">{{colis.status}}</span>
+                          <span *ngIf="colis.status === 'Terminer'" class="badge badge-pill badge-success">{{colis.status}}</span>
+                      </td>
+                      <td class="ui-resizable-column">
+                        <div fxLayout="row" fxLayoutGap="5px">
+                            <div fxLayout="row" fxLayoutGap="5px">
+                                <div><button class="btn btn-sm btn-primary"
+                                  [routerLink]="['/logistiq', colis._id, 'edit']">
+                                  <span><i class="far fa-edit"></i></span>
+                                </button></div>
+                                    <div><button nz-popconfirm
+                                             nzPopconfirmTitle="Voulez vraiment supprimer?"
+                                             nzPopconfirmPlacement="bottom"
+                                             (nzOnConfirm)="confirm(colis._id)"
+                                             (nzOnCancel)="cancel()" class="btn btn-sm btn-danger">
+                                  <span><i class="far fa-trash"></i></span>
+                                </button></div>
+                                
+                              </div>
+                        </div>
+                      </td>
+                  </tr>
+              </ng-template>
+          </p-table>
+      </div>
+    </div>

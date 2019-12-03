@@ -1,0 +1,318 @@
+<nz-page-header nzBackIcon nzTitle="MODIFIER UN EXPEDITEUR">
+</nz-page-header>
+<div class="card">
+  <div class="card-header" style="text-transform: uppercase; background-color: darkblue; color: white;">
+    <span><i class="far fa-user-plus"></i></span> Formulaire de modification de données
+  </div>
+  <div class="card-body">
+    <form nz-form [formGroup]="expdtForm">
+      <div nz-row nzGutter="4">
+        <div nz-col nzSpan="12">
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label
+                  [nzSpan]="6">
+                  Ville de départ
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input
+                    nz-input placeholder="Ville de départ"
+                    style="width: 300px"
+                    formControlName="villeDepart"/>
+                  <ng-template #userErrorTpl let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît veuillez entrez une ville de départ
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6">
+                  Jour de départ
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl1"
+                  nzHasFeedback
+                  [nzSpan]="14">
+                  <nz-date-picker
+                    formControlName="jourDepart"
+                    style="width: 300px"
+                  ></nz-date-picker>
+                  <ng-template #userErrorTpl1 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez un jour de départ
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6">
+                  Ville de d'arrivée
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl2"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input nz-input
+                         placeholder="Ville d'arrivée"
+                         style="width: 300px"
+                         formControlName="villeArrivee"/>
+                  <ng-template #userErrorTpl2 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez une ville d'arrivée
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6">
+                  Type de colis
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl3"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input nz-input
+                         placeholder="Type de colis"
+                         style="width: 300px"
+                         formControlName="typeColis"/>
+                  <ng-template #userErrorTpl3 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez le type de colis
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6">
+                  Ville de d'arrivée
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl15"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input nz-input
+                         placeholder="Ville d'arrivée"
+                         style="width: 300px"
+                         formControlName="villeArrivee"/>
+                  <ng-template #userErrorTpl15 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez une ville d'arrivée
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="6">
+                  Nombre de kilos
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl4"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <nz-input-number
+                    formControlName="nbreKilo"
+                    style="width: 300px"
+                    [nzMin]="0"
+                    [nzMax]="200"
+                    [nzStep]="0.1"
+                    [nzPlaceHolder]="'Kilos'"
+                  ></nz-input-number>
+                  <ng-template #userErrorTpl4 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez le nombre de kilo
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+        </div>
+        <div nz-col [nzSpan]="12">
+          <div nz-row>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="8">
+                Montant à payer
+              </nz-form-label>
+              <nz-form-control
+                nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl5"
+                nzHasFeedback
+                nzSpan="14">
+                <nz-input-number
+                  formControlName="montantExpediteur"
+                  style="width: 300px"
+                  [nzMin]="500"
+                  [nzMax]="10000000"
+                  [nzStep]="500"
+                  [nzPlaceHolder]="'Somme'"
+                ></nz-input-number>
+                <ng-template #userErrorTpl5 let-control>
+                  <ng-container *ngIf="control.hasError('required')">
+                    S'il vous plaît entrez un montant à payer par l'expéditeur
+                  </ng-container>
+                </ng-template>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="8">
+                  Nom & Prénoms
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl6"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input nz-input
+                         placeholder="Nom et Prénoms de l'expéditeur"
+                         style="width: 300px"
+                         formControlName="nom_prenoms"/>
+                  <ng-template #userErrorTpl6 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez le nom et prenoms de l'expéditeur
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="8">
+                  Date de naissance
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl7"
+                  nzHasFeedback
+                  style="width: 300px" [nzSpan]="14">
+                  <nz-date-picker
+                    formControlName="dateNaissance"
+                    style="width: 300px"
+                    nzPlaceHolder="Date"></nz-date-picker>
+                  <ng-template #userErrorTpl7 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît selectionner la date de naissance
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label nzSpan="8">
+                  Adresse géographique
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl8"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input
+                    nz-input placeholder="Adresse"
+                    style="width: 300px"
+                    formControlName="addresse"/>
+                  <ng-template #userErrorTpl8 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez l'adresse géographique
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="8">
+                  Email
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl9"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input nz-input
+                         placeholder="Adresse e-mail"
+                         style="width: 300px"
+                         formControlName="email"/>
+                  <ng-template #userErrorTpl9 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez l'adresse email de l'expediteur
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+          <div nz-row>
+            <div nz-col>
+              <nz-form-item>
+                <nz-form-label [nzSpan]="8">
+                  Numéro de téléphone
+                </nz-form-label>
+                <nz-form-control
+                  nzValidatingTip="Validating..." [nzErrorTip]="userErrorTpl10"
+                  nzHasFeedback
+                  nzSpan="14">
+                  <input nz-input
+                         placeholder="###-########"
+                         style="width: 300px"
+                         formControlName="telephone"/>
+                  <ng-template #userErrorTpl10 let-control>
+                    <ng-container *ngIf="control.hasError('required')">
+                      S'il vous plaît entrez le numéro de téléphone de l'expediteur
+                    </ng-container>
+                  </ng-template>
+                </nz-form-control>
+              </nz-form-item>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nz-divider></nz-divider>
+      <div id="btn">
+        <div id="btn2">
+          <button
+            class="btn btn-primary btn-sm"
+            (click)="submitForm()"
+            [disabled]="!expdtForm.valid">
+                      <span>
+                        <i class="far fa-save"></i>
+                      </span>
+            ENREGISTRER
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

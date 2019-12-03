@@ -1,0 +1,57 @@
+<nz-page-header nzBackIcon nzTitle="LISTE DES VOYAGEURS">
+  <nz-page-header-extra>
+    <nz-input-group [nzSuffix]="suffixIconSearch">
+      <input type="text" nz-input placeholder="Rechercher un voyageur"
+             (input)="dt.filterGlobal($event.target.value, 'contains')"
+
+      />
+      <ng-template #suffixIconSearch>
+        <i nz-icon nzType="search"></i>
+      </ng-template>
+    </nz-input-group>
+  </nz-page-header-extra>
+</nz-page-header>
+  <div>
+    <p-table #dt [paginator]="true" 
+      [resizableColumns]="true" columnResizeMode="expand"
+      [rows]="10" [value]="voyageurs$ | async"
+             [globalFilterFields]="['nom_prenoms']">
+    <ng-template pTemplate="header">
+      <tr>
+        <th pResizableColumn>VOYAGEUR</th>
+        <th pResizableColumn>VILLE DEPART</th>
+        <th pResizableColumn>VILLE ARRIVEE</th>
+        <th pResizableColumn>DATE DE DEPART</th>
+        <th pResizableColumn>TYPE DE COLIS</th>
+        <th pResizableColumn>ACTIONS</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-voyageur>
+      <tr>
+        <td class="ui-resizable-column">{{voyageur.nom_prenoms}}</td>
+        <td class="ui-resizable-column">{{voyageur.villeDepart}}</td>
+        <td class="ui-resizable-column">{{voyageur.villeArrivee}}</td>
+        <td class="ui-resizable-column">{{voyageur.jourDepart | date: 'fullDate'}}</td>
+        <td class="ui-resizable-column">{{voyageur.typeColis}}</td>
+        <td class="ui-resizable-column">
+          <div fxLayout="row" fxLayoutGap="5px">
+            <div><button class="btn btn-sm btn-primary"
+                         [routerLink]="['/voyags', voyageur._id, 'edit']">
+              <span><i class="far fa-edit"></i></span>
+            </button></div>
+            <div><button class="btn btn-sm btn-warning" [routerLink]="['/voyags', voyageur._id]">
+              <span><i class="far fa-eye"></i></span>
+            </button></div>
+            <div><button class="btn btn-sm btn-danger" nz-popconfirm
+                         nzPopconfirmTitle="Voulez vraiment supprimer?"
+                         nzPopconfirmPlacement="bottom"
+                         (nzOnConfirm)="confirm(voyageur._id)"
+                         (nzOnCancel)="cancel()">
+              <span><i class="far fa-trash"></i></span>
+            </button></div>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    </p-table>
+  </div>

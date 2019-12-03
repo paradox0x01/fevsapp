@@ -1,0 +1,30 @@
+
+
+<div class="container">
+    <nz-page-header nzBackIcon nzTitle="INFORMATION DETAILLÉ VOYAGEUR">
+    </nz-page-header>
+    <div class="card">
+        <div class="card-body" *ngIf="voyags">
+            <p> <span style="margin-right: 10px">
+                <i class="fad fa-user"></i>
+            </span>{{voyags.nom_prenoms}}</p>
+            <nz-divider></nz-divider>
+            <nz-descriptions>
+                <nz-descriptions-item nzTitle="Ville de départ">{{voyags.villeDepart}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Jour de départ">{{voyags.jourDepart | date:'fullDate'}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Ville d'arrivée">{{voyags.villeArrivee}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Jour d'arrivée">{{voyags.jourArrivee | date:'fullDate'}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Type de Colis">
+                    {{voyags.typeColis}}
+                </nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Nombre de Kilo">{{voyags.nbreKilo }} Kilos</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Montant payé au voyageur">{{voyags.montantVoyageur}} Francs CFA</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Nom & Prenoms">{{voyags.nom_prenoms}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Date de Naissance">{{voyags.dateNaissance | date:'mediumDate'}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Adresse géographique">{{voyags.addresse}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Adresse Email">{{voyags.email}}</nz-descriptions-item>
+                <nz-descriptions-item nzTitle="Numéro de télephone">{{voyags.telephone}}</nz-descriptions-item>
+            </nz-descriptions>
+        </div>
+    </div>
+</div>
